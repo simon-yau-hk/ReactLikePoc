@@ -1,6 +1,8 @@
 // app.js - Express application setup
 const express = require('express');
 const cors = require('cors');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpecs = require('./configs/swagger');
 
 const app = express();
 
@@ -8,6 +10,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
+// Swagger Documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs, {
+    explorer: true,
+    customCss: '.swagger-ui .topbar { display: none }',
+    customSiteTitle: 'Task Management API Documentation'
+  }));
+  
 
 // Routes
 const memberRoutes = require('./routes/memberRoutes');

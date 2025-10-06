@@ -8,6 +8,27 @@ const memberController = require('../controllers/memberController');
 // ========================================
 
 // GET /api/members - Get all members
+/**
+ * @swagger
+ * /api/members:
+ *   get:
+ *     summary: Get all members
+ *     description: Retrieve a list of all members
+ *     tags: [Members]
+ *     responses:
+ *       200:
+ *         description: List of members retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Member'
+ *       500:
+ *         description: Internal server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
 router.get('/', memberController.getAllMembers);
 
 // GET /api/members/tasks - Get all members with tasks

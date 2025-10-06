@@ -13,16 +13,24 @@
     "sync-db": "node scripts/syncDatabase.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "mysql2": "^3.6.0",
     "sequelize": "^6.32.1",
-    "dotenv": "^16.3.1"
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-  "keywords": ["express", "sequelize", "mysql", "api", "task-management"],
+  "keywords": [
+    "express",
+    "sequelize",
+    "mysql",
+    "api",
+    "task-management"
+  ],
   "author": "Your Name",
   "license": "MIT"
 }

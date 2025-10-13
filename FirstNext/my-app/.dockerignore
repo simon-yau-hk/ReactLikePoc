@@ -1,0 +1,59 @@
+# NextJs/.dockerignore
+
+# Dependencies
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Next.js build output
+.next
+out
+
+# Environment variables
+.env.local
+.env.development
+.env.test
+.env.production
+.env*.local
+
+# Version control
+.git
+.gitignore
+
+# IDE and editor files
+.idea
+.vscode
+*.swp
+*.swo
+.DS_Store
+
+# Testing
+coverage
+.nyc_output
+__tests__
+*.test.js
+*.spec.js
+
+# Misc
+README.md
+LICENSE
+.dockerignore
+Dockerfile
+docker-compose*
+*.md
+.cache
+.eslintrc
+.prettierrc
+.editorconfig
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local development specific
+.husky
+.github
+docs
